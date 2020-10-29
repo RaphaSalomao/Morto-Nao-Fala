@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jogadores sorteados</title>
+</head>
+<body>
+<h2>Sorteado</h2>
+<div th:unless="${#lists.isEmpty(jogadores)}">
+	<dl th:each="jogador :${jogadores}">
+		<dt>
+			<span th:text="${jogador.nome}">Jogador: </span>
+		
+<!-- 			<span th:text="${jogador.role}">Papel: </span> -->
+		</dt>
+	</dl>
+</div>
+</body>
+</html>
